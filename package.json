@@ -1,0 +1,25 @@
+{
+  "name": "moralis_next_dapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@moralisweb3/next": "^2.22.3",
+    "moralis": "^2.22.3",
+    "next": "^13.4.8",
+    "next-auth": "^4.22.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.14",
+    "typescript": "5.1.6"
+  }
+}
