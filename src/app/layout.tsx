@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from './components/NavBar';
 
 export const metadata = {
   title: 'Moralis Dapp',
@@ -12,7 +13,10 @@ interface IProps {
 export default function RootLayout({children}: IProps) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
