@@ -8,9 +8,10 @@ interface WalletBalanceProps {
 }
 
 // Take address as a prop
-const WalletBalance = () => {
-  //   const address = '0x2bf3937b8bccce4b65650f122bb3f1976b937b2f';
-  const address = '0x5e41020f3520F7D49d03BbbC693f6CBD002f387b';
+const WalletBalance = ({address}: WalletBalanceProps) => {
+  // const address = '0x2bf3937b8bccce4b65650f122bb3f1976b937b2f';
+  // const address = '0x5e41020f3520F7D49d03BbbC693f6CBD002f387b';
+  // const address = '0xa6a6653aa1beb6fdfaf008a1aee25ded0526405d';
   const {data: nativeBalance} = useEvmNativeBalance({address});
 
   return (
