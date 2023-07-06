@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import WalletBalance from './WalletBalance';
 
 const WalletBalances = () => {
-  const [addresses, setAddresses] = useState(['']);
+  const [addresses, setAddresses] = useState<string[]>([]);
   const [addressInput, setAddressInput] = useState('');
 
   const addAddress = () => {
