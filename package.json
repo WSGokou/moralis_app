@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@moralisweb3/next": "^2.22.3",
+    "@types/node": "^20.4.0",
     "moralis": "^2.22.3",
     "next": "^13.4.8",
     "next-auth": "^4.22.1",
