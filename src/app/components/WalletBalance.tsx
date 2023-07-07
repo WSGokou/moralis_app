@@ -15,7 +15,7 @@ const WalletBalance = ({address}: WalletBalanceProps) => {
   const {data: nativeBalance} = useEvmNativeBalance({address});
 
   return (
-    <div>
+    <div className="mt-5">
       <h3>Wallet: {address}</h3>
       <h3>Native Balance: {nativeBalance?.balance.ether} ETH</h3>
     </div>
