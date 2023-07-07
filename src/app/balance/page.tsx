@@ -1,7 +1,7 @@
 import React from 'react';
 import WalletBalances from '../components/WalletBalances';
 
-const page = () => {
+const BalancePage = () => {
   return (
     <div>
       <h1>Wallet Balances</h1>
@@ -10,4 +10,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default BalancePage;

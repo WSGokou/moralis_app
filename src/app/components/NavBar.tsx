@@ -8,12 +8,14 @@ const navLinks = [
   {
     text: 'Home',
     href: '/',
-    // icon: <MdLogin />,
   },
   {
     text: 'WalletBalance',
     href: '/balance',
-    // icon: <MdSpaceDashboard />,
+  },
+  {
+    text: 'TokenPrices',
+    href: '/tokens',
   },
 ];
 
