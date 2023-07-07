@@ -1,6 +1,6 @@
 import React from 'react';
 import TokenPrice from './TokenPrice';
-import {tokens, tokensByChain} from '@/constants/tokens';
+import {tokensByChain} from '@/constants/tokens';
 
 const TokenPrices = () => {
   return (
