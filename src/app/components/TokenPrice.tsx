@@ -6,18 +6,18 @@ import React from 'react';
 
 interface TokenPriceProps {
   token: token;
+  chainId: string;
 }
 
-const TokenPrice = ({token}: TokenPriceProps) => {
+const TokenPrice = ({token, chainId}: TokenPriceProps) => {
   const {data: nativePrice} = useEvmTokenPrice({
-    chain: token.chain,
+    chain: chainId,
     address: token.address,
   });
 
   return (
-    <div className="mt-5">
-      TokenPrice
-      <h1>{token.name}</h1>
+    <div className="mb-5 border-2">
+      <h1 className="text-lg">{token.name}</h1>
       <div>${nativePrice?.usdPrice}</div>
     </div>
   );
