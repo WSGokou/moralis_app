@@ -11,10 +11,14 @@ interface TokenPriceProps {
 }
 
 const TokenPrice = ({token, chainId}: TokenPriceProps) => {
-  const {data: nativePrice} = useEvmTokenPrice({
+  const {data: nativePrice, isFetching} = useEvmTokenPrice({
     chain: chainId,
     address: token.address,
   });
+
+  if (isFetching) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="mb-5 border-2 flex flex-col items-center">
