@@ -7,14 +7,14 @@ interface WalletNFTProps {
 
 const WalletNFT = ({nft}: WalletNFTProps) => {
   const nftImage =
-    nft?.metadata.image && nft?.metadata?.image.includes('ipfs')
-      ? `https://ipfs.io/ipfs/${nft.metadata.image.split('ipfs://')[1]}`
-      : nft.metadata.image.split('\\')[0];
+    nft?.metadata?.image && nft?.metadata?.image?.includes('ipfs')
+      ? `https://ipfs.io/ipfs/${nft?.metadata?.image?.split('ipfs://')[1]}`
+      : nft?.metadata?.image?.split('\\')[0];
 
   return (
     <div className="flex flex-col gap-2 p-4 items-center border-2 border-blue-600">
       {/* <h1>{JSON.stringify(Nft)}</h1> */}
-      <h1>{nft.metadata.description}</h1>
+      <h1>{nft?.metadata?.name}</h1>
       {nftImage ? (
         <Image
           src={nftImage}
@@ -25,7 +25,7 @@ const WalletNFT = ({nft}: WalletNFTProps) => {
       ) : (
         'No Image to display'
       )}
-      <h1>{nft.metadata.name}</h1>
+      <h1>{nft?.metadata?.description}</h1>
       {/* <button onClick={() => console.log(nft)}>consolelog</button> */}
     </div>
   );
