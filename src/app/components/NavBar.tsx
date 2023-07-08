@@ -17,6 +17,10 @@ const navLinks = [
     text: 'TokenPrices',
     href: '/tokens',
   },
+  {
+    text: 'WalletNFTs',
+    href: '/nft',
+  },
 ];
 
 const Navbar = () => {
