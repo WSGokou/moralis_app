@@ -1,6 +1,6 @@
 'use client';
 import React, {useState} from 'react';
-import WalletBalance from './WalletBalance';
+import WalletBalance from './BalanceDisplay';
 
 const WalletBalances = () => {
   const [addresses, setAddresses] = useState<string[]>([]);
@@ -24,8 +24,9 @@ const WalletBalances = () => {
       <div>
         <input
           type="text"
-          onChange={(e) => setAddressInput(e.target.value)}
           value={addressInput}
+          onChange={(e) => setAddressInput(e.target.value)}
+          placeholder="Enter Wallet Address"
           className="border"
         />
         <button

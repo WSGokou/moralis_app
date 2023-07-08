@@ -3,14 +3,20 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
+        protocol: 'https',
+        hostname: '**',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'cdn.moralis.io',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ipfs.io',
         port: '',
         pathname: '/**',
       },
