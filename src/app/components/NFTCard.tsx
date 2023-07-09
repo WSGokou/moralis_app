@@ -13,7 +13,7 @@ const WalletNFT = ({nft}: WalletNFTProps) => {
 
   return (
     <div className="flex flex-col gap-2 p-4 items-center border-2 border-blue-600">
-      {/* <h1>{JSON.stringify(Nft)}</h1> */}
+      {/* <h1>{JSON.stringify(nft)}</h1> */}
       <h1>{nft?.metadata?.name}</h1>
       {nftImage ? (
         <Image

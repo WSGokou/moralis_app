@@ -22,6 +22,10 @@ export const tokensByChain: tokensByChain[] = [
         name: 'BNB',
         address: '0xB8c77482e45F1F44dE1745F52C74426C631bDD52',
       },
+      {
+        name: 'BOBO',
+        address: '0xb90b2a35c65dbc466b04240097ca756ad2005295',
+      },
     ],
   },
   {

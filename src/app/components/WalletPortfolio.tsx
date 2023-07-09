@@ -1,27 +1,24 @@
 'use client';
 
+import {useEvmWalletTokenBalances} from '@moralisweb3/next';
 import React, {useState} from 'react';
-import WalletNFT from './NFTCard';
-import {useEvmWalletNFTs} from '@moralisweb3/next';
+import WalletTokenCard from './WalletTokenCard';
 
-const WalletNFTs = () => {
-  const [address, setAddress] = useState<string>(
-    '0x5e41020f3520F7D49d03BbbC693f6CBD002f387b',
-  );
+const WalletPortfolio = () => {
+  const [address, setAddress] = useState<string>('');
   const [addressInput, setAddressInput] = useState('');
 
-  const {data: nfts} = useEvmWalletNFTs({
-    address,
+  const {data: tokens} = useEvmWalletTokenBalances({
     chain: '0x1',
+    address,
   });
 
   const addAddress = () => {
     const newAddress = addressInput;
     setAddress(newAddress);
   };
-
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col gap-2 items-center">
       <div className="flex my-2">
         <input
           type="text"
@@ -38,17 +35,21 @@ const WalletNFTs = () => {
           Confirm
         </button>
       </div>
-      <p>You are currently viewing the NFTs for wallet address: {address}</p>
-      <div className="gap-5 lg:gap-20 items-center grid lg:grid-cols-3">
-        {nfts?.map((nft, idx) => (
+      <p>Wallet:</p>
+      {address}
+      {(tokens?.length as number) > 0 ? (
+        tokens?.map((token, idx) => (
           <div key={idx}>
-            <WalletNFT nft={nft} />
+            <WalletTokenCard token={token} />
+            <p>{}</p>
           </div>
-        ))}
-      </div>
-      {/* {JSON.stringify(nfts)} */}
+        ))
+      ) : (
+        <p>No Tokens to display</p>
+      )}
+      {/* <button onClick={() => console.log(tokens)}>Consolelog</button> */}
     </div>
   );
 };
 
-export default WalletNFTs;
+export default WalletPortfolio;
