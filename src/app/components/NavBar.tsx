@@ -21,6 +21,14 @@ const navLinks = [
     text: 'WalletNFTs',
     href: '/nft',
   },
+  {
+    text: 'Portfolio',
+    href: '/portfolio',
+  },
+  {
+    text: 'Todo',
+    href: '/todo',
+  },
 ];
 
 const Navbar = () => {
@@ -48,7 +56,7 @@ const Navbar = () => {
         return (
           <Link
             className={`flex gap-2 items-center hover:text-blue-500 ${
-              isActive && idx !== 4 ? 'text-blue-500' : ''
+              isActive ? 'text-blue-500' : ''
             }`}
             key={idx}
             href={link.href}
